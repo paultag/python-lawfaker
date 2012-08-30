@@ -10,7 +10,7 @@ long_description = open('README.md').read()
 setup(
     name=__appname__,
     version=__version__,
-    packages=['lawfaker', 'lawfaker.populators'],
+    packages=['lawfaker', 'lawfaker.populators', 'lawfaker.models'],
     author="Paul Tagliamonte",
     author_email="paultag@debian.org",
     long_description=long_description,

@@ -8,7 +8,7 @@ rand_pool = 1000
 
 paths = [
     "%s/data" % (os.path.abspath(".")),
-    "%s/../../data" % (os.path.abspath(__file__)),
+    "%s/../data" % (os.path.abspath(os.path.dirname(__file__))),
     "/usr/share/lawfaker/data/",
     "/usr/local/share/lawfaker/data/"
 ]
