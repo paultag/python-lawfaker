@@ -32,10 +32,16 @@ def calculate_pcts(objects):
     return objects
 
 
-def get_random_choice(objects):
+def get_random_choice(objects, filters=[]):
     # We either have a "pct" attr, or a "count" attr. If we have a "count",
     # then we should calculate pct.
     pool = []
+
+    if filters != []:
+        nobj = []
+        for filt in filters:
+            nobj += objects[filt]
+        objects = nobj
 
     if "count" in objects[0]:
         objects = calculate_pcts(objects)
@@ -51,4 +57,5 @@ def get_random_choice(objects):
 
         for x in range(0, int(obj['pct'] * 100)):
             pool.append(obj)
+
     return random.choice(pool)

@@ -1,22 +1,22 @@
 {
-    "either": [
+    "both": [
         {
             "name": "Dr.",
-            "pct": "1%"
+            "pct": "0.1%"
         }
     ],
     "female": [
         {
-            "name": "",
-            "pct": "%"
+            "name": "Ms.",
+            "pct": "10%"
         },
         {
-            "name": "",
-            "pct": "%"
+            "name": "Mrs.",
+            "pct": "20%"
         },
         {
-            "name": "",
-            "pct": "%"
+            "name": "Miss",
+            "pct": "70%"
         }
     ],
     "male": [

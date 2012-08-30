@@ -26,9 +26,6 @@ def last_name(obj):
 
 def title(obj):
     titles = load_data("titles")
-    title = random.choice(random.choice([
-        titles[obj.gender],
-        titles["either"]
-    ]))
-    obj.title = title
+    title = get_random_choice(titles, [obj.gender, "both"])
+    obj.title = title['name']
     return obj
