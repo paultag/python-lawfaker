@@ -1,23 +1,8 @@
 #!/usr/bin/env python
 
-from lawfaker.populator import run_populator
+from lawfaker.models.legislator import Legislator
 
-populators = [
-    "lawfaker.populators.core.first_name",
-    "lawfaker.populators.core.last_name",
-    "lawfaker.populators.core.middle_name",
-    "lawfaker.populators.core.title",
-    "lawfaker.populators.usa.state",
-    "lawfaker.populators.usa.chamber",
-    "lawfaker.populators.usa.party"
-]
-
-class Person(object):
-    pass
-
-test = Person()
-for populator in populators:
-    run_populator(populator, test)
+test = Legislator()
 
 print "%s %s %s %s" % (
     test.title,
