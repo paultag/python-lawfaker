@@ -9,4 +9,5 @@ populators = [
 
 class Legislator(Person):
     def __init__(self):
+        Person.__init__(self)
         self = run_populators(populators, self)
