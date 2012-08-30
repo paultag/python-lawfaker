@@ -1,4 +1,5 @@
 from lawfaker.data import load_data, get_random_choice
+from lawfaker.utils import normaize_last_name
 import random
 
 
@@ -19,8 +20,9 @@ def middle_name(obj):
 
 def last_name(obj):
     lnames = load_data("last_names")
-    name = get_random_choice(lnames)
-    obj.last_name = name['name']
+    name = get_random_choice(lnames)['name']
+    name = normaize_last_name(name)
+    obj.last_name = name
     return obj
 
 
