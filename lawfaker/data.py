@@ -4,7 +4,7 @@ import random
 import json
 import os
 
-rand_pool = 100
+rand_pool = 1000
 
 paths = [
     "%s/data" % (os.path.abspath(".")),
@@ -51,11 +51,16 @@ def get_random_choice(objects, filters=[]):
         if isinstance(obj['pct'], basestring):
             if "%" in obj['pct']:
                 pct = float(obj['pct'].replace("%", ""))
-                pct = pct / 100
+        else:
+            pct = float(pct)
 
+        pct = pct / 100
         obj['pct'] = pct
+        practical = int(obj['pct'] * rand_pool)
+        if practical == 0:
+            practical = 1
 
-        for x in range(0, int(obj['pct'] * 100)):
+        for x in range(0, practical):
             pool.append(obj)
 
     return random.choice(pool)
