@@ -1,10 +1,10 @@
-from lawfaker.data import load_data
+from lawfaker.data import load_data, get_random_choice
 import random
 
 
 def first_name(obj):
     fnames = load_data("first_names")
-    name = random.choice(fnames)
+    name = get_random_choice(fnames)
     obj.first_name = name['name']
     obj.gender = name['gender']
     return obj
@@ -12,14 +12,14 @@ def first_name(obj):
 
 def middle_name(obj):
     fnames = load_data("first_names")
-    name = random.choice(fnames)
+    name = get_random_choice(fnames)
     obj.middle_name = name['name']  # Hack!
     return obj
 
 
 def last_name(obj):
     lnames = load_data("last_names")
-    name = random.choice(lnames)
+    name = get_random_choice(lnames)
     obj.last_name = name['name']
     return obj
 
