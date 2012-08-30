@@ -51,8 +51,8 @@ def get_random_choice(objects, filters=[]):
         if isinstance(obj['pct'], basestring):
             if "%" in obj['pct']:
                 pct = float(obj['pct'].replace("%", ""))
-        if pct > 1:
-            pct = pct / 100
+                pct = pct / 100
+
         obj['pct'] = pct
 
         for x in range(0, int(obj['pct'] * 100)):
