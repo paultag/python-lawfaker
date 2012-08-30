@@ -19,6 +19,6 @@ for x in range(0, 20):
     print "%s %s %s %s" % (
         test.title,
         test.first_name,
-        test.middle_name,
+        "%s." % (test.middle_name[0]),
         test.last_name
     )
