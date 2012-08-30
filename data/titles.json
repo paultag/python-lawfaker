@@ -1,0 +1,13 @@
+{
+    "either": [
+        "Dr."
+    ],
+    "female": [
+        "Mrs.",
+        "Ms.",
+        "Miss"
+    ],
+    "male": [
+        "Mr."
+    ]
+}

@@ -5,7 +5,8 @@ from lawfaker.populator import run_populator
 populators = [
     "lawfaker.populators.core.first_name",
     "lawfaker.populators.core.last_name",
-    "lawfaker.populators.core.middle_name"
+    "lawfaker.populators.core.middle_name",
+    "lawfaker.populators.core.title"
 ]
 
 class Person(object):
@@ -16,4 +17,9 @@ test = Person()
 for populator in populators:
     run_populator(populator, test)
 
-print test.first_name
+print "%s %s %s %s" % (
+    test.title,
+    test.first_name,
+    test.middle_name,
+    test.last_name
+)
