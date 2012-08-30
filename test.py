@@ -16,4 +16,4 @@ test = Person()
 for populator in populators:
     run_populator(populator, test)
 
-print test
+print test.first_name
