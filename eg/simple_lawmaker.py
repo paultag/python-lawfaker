@@ -10,7 +10,7 @@ print "%s %s %s %s" % (
     test.last_name
 )
 
-print "  %s memeber of the %s from %s, %s" % (
+print "  %s member of the %s from %s, %s" % (
     {
         "R": "Republican",
         "D": "Democrat",
